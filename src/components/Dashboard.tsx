@@ -1,13 +1,13 @@
 
 import React from "react";
-import { DollarSign, Bell } from "lucide-react";
+import { DollarSign, Bell, LogIn, Activity, Info, Contact, Key } from "lucide-react";
 
 const ActionButton = ({ title, icon, onClick }: { title: string; icon: React.ReactNode; onClick?: () => void }) => (
   <div 
     className="flex flex-col items-center cursor-pointer" 
     onClick={onClick}
   >
-    <div className="w-20 h-20 bg-sportybet-red rounded-lg flex items-center justify-center mb-2 shadow-md hover:bg-sportybet-darkred transition-colors">
+    <div className="w-20 h-20 bg-sportybet-red rounded-2xl flex items-center justify-center mb-2 shadow-md hover:bg-sportybet-darkred transition-colors">
       {icon}
     </div>
     <span className="text-sportybet-red text-sm">{title}</span>
@@ -26,9 +26,9 @@ const Dashboard = () => {
       <div className="bg-sportybet-red mx-4 p-3 rounded-lg shadow-md mb-6">
         <div className="flex justify-center">
           <img 
-            src="/placeholder.svg" 
+            src="/lovable-uploads/40603d23-9974-445b-8f1a-6155f35ee66d.png" 
             alt="Sportybet interfaces" 
-            className="w-full max-w-md object-cover rounded"
+            className="w-full max-w-sm object-cover"
           />
         </div>
       </div>
@@ -44,23 +44,23 @@ const Dashboard = () => {
           />
           <ActionButton 
             title="Login" 
-            icon={<DollarSign className="w-8 h-8 text-white" />} 
+            icon={<LogIn className="w-8 h-8 text-white" />} 
           />
           <ActionButton 
             title="Free Predictions" 
-            icon={<DollarSign className="w-8 h-8 text-white" />} 
+            icon={<Activity className="w-8 h-8 text-white" />} 
           />
           <ActionButton 
             title="About" 
-            icon={<DollarSign className="w-8 h-8 text-white" />} 
+            icon={<Info className="w-8 h-8 text-white" />} 
           />
           <ActionButton 
             title="Contact" 
-            icon={<DollarSign className="w-8 h-8 text-white" />} 
+            icon={<Contact className="w-8 h-8 text-white" />} 
           />
           <ActionButton 
             title="Buy Password" 
-            icon={<DollarSign className="w-8 h-8 text-white" />} 
+            icon={<Key className="w-8 h-8 text-white" />} 
           />
         </div>
       </div>
