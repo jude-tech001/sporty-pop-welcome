@@ -19,15 +19,6 @@ const About = () => {
         <h1 className="text-xl font-bold text-sportybet-red">How does the app work?</h1>
       </div>
 
-      {/* Logo */}
-      <div className="flex justify-center mb-4">
-        <img 
-          src="/lovable-uploads/d02da8d5-cf85-4e64-be9c-a74037e55ddb.png" 
-          alt="Sportybet Logo" 
-          className="w-16 h-16 object-contain"
-        />
-      </div>
-
       <h2 className="text-sportybet-red text-lg font-semibold mb-2">How does the app work?</h2>
       <h3 className="text-sportybet-red font-medium mb-4">Read Below</h3>
 

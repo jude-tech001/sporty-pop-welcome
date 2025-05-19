@@ -11,7 +11,7 @@ const WelcomePopup = ({ onClose }: WelcomePopupProps) => {
     <div className="fixed inset-0 flex items-center justify-center bg-black/70 z-50 px-4">
       <div className="bg-white p-6 rounded-md shadow-lg max-w-md w-full animate-fade-in-up">
         <div className="space-y-4">
-          <h2 className="text-xl font-bold text-center">2023 VERSION!!!</h2>
+          <h2 className="text-xl font-bold text-center">2025 VERSION!!!</h2>
           
           <p className="text-sm">
             Welcome dear valued user. Buy password from the app and not from any person that 

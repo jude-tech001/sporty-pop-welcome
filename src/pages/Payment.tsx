@@ -1,19 +1,23 @@
 
-import React from "react";
+import React, { useState } from "react";
 import { ArrowLeft } from "lucide-react";
 import { useNavigate, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import PaymentConfirmation from "@/components/PaymentConfirmation";
 
 const Payment = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const { email, phoneNumber } = location.state || {};
+  const [showConfirmation, setShowConfirmation] = useState(false);
 
   const handlePaymentConfirm = () => {
-    // Here you would usually implement payment confirmation logic
-    alert("Payment confirmed! Password will be sent to your email or phone number.");
-    navigate("/");
+    setShowConfirmation(true);
   };
+
+  if (showConfirmation) {
+    return <PaymentConfirmation email={email || ""} phoneNumber={phoneNumber || ""} />;
+  }
 
   return (
     <div className="min-h-screen bg-gray-100 p-4">
