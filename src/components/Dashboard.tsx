@@ -66,6 +66,17 @@ const Dashboard = () => {
         <Bell className="w-6 h-6 text-sportybet-black" />
       </div>
 
+      {/* Sportybet Banner */}
+      <div className="px-4 mb-4">
+        <div className="w-full overflow-hidden rounded-lg mb-4">
+          <img 
+            src="/lovable-uploads/47f0973c-6f19-4ef7-aea6-6de85801bbd7.png" 
+            alt="Sportybet Banner" 
+            className="w-full h-auto object-cover" 
+          />
+        </div>
+      </div>
+
       {/* Actions Section */}
       <div className="px-4 mb-4">
         <h2 className="text-xl font-bold text-sportybet-red mb-3">Actions</h2>
