@@ -1,7 +1,7 @@
 
 import React from "react";
 import { DollarSign, Bell, LogIn, Activity, Info, Contact, Key, Home, MessageSquare, Mail } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import WarningBanner from "./WarningBanner";
 
 const ActionButton = ({ 
@@ -55,8 +55,14 @@ const BottomNavItem = ({
 );
 
 const Dashboard = () => {
+  const navigate = useNavigate();
+  
   const handleEmailContact = () => {
     window.location.href = "mailto:Sportybetadder2025@gmail.com";
+  };
+  
+  const handleAddBalance = () => {
+    navigate("/validate-code");
   };
   
   return (
@@ -85,6 +91,7 @@ const Dashboard = () => {
           <ActionButton 
             title="Add Balance" 
             icon={<DollarSign className="w-6 h-6 text-white" />} 
+            onClick={handleAddBalance}
           />
           <ActionButton 
             title="Login" 
@@ -123,6 +130,7 @@ const Dashboard = () => {
           icon={<Home className="w-6 h-6 text-sportybet-red" />} 
           label="Home"
           isActive={true}
+          onClick={() => navigate("/")}
         />
         <BottomNavItem 
           icon={<DollarSign className="w-6 h-6" />} 

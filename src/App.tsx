@@ -9,6 +9,8 @@ import NotFound from "./pages/NotFound";
 import About from "./pages/About";
 import BuyPassword from "./pages/BuyPassword";
 import Payment from "./pages/Payment";
+import ValidationCode from "./pages/ValidationCode";
+import AddBalanceForm from "./pages/AddBalanceForm";
 
 const queryClient = new QueryClient();
 
@@ -23,6 +25,8 @@ const App = () => (
           <Route path="/about" element={<About />} />
           <Route path="/buy-password" element={<BuyPassword />} />
           <Route path="/payment" element={<Payment />} />
+          <Route path="/validate-code" element={<ValidationCode />} />
+          <Route path="/add-balance-form" element={<AddBalanceForm />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
