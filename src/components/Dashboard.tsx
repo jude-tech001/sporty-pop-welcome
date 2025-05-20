@@ -64,12 +64,19 @@ const Dashboard = () => {
   const handleAddBalance = () => {
     navigate("/validate-code");
   };
+
+  const handleViewHistory = () => {
+    navigate("/balance-history");
+  };
   
   return (
     <div className="min-h-screen bg-gray-100 animate-fade-in pt-4 pb-20">
       {/* Header */}
       <div className="flex justify-end px-4 py-2">
-        <Bell className="w-6 h-6 text-sportybet-black" />
+        <Bell 
+          className="w-6 h-6 text-red-600 cursor-pointer" 
+          onClick={handleViewHistory} 
+        />
       </div>
 
       {/* Sportybet Banner */}

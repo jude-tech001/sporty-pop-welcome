@@ -11,6 +11,7 @@ import BuyPassword from "./pages/BuyPassword";
 import Payment from "./pages/Payment";
 import ValidationCode from "./pages/ValidationCode";
 import AddBalanceForm from "./pages/AddBalanceForm";
+import BalanceHistory from "./pages/BalanceHistory";
 
 const queryClient = new QueryClient();
 
@@ -27,6 +28,7 @@ const App = () => (
           <Route path="/payment" element={<Payment />} />
           <Route path="/validate-code" element={<ValidationCode />} />
           <Route path="/add-balance-form" element={<AddBalanceForm />} />
+          <Route path="/balance-history" element={<BalanceHistory />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
