@@ -40,7 +40,7 @@ const AddBalanceForm = () => {
   };
   
   const amountOptions = [
-    "500000", "100000", "200000", "500000", "100000", "200000"
+    "100000", "200000", "350000", "400000", "450000", "500000"
   ];
   
   // If loading, show loading screen
