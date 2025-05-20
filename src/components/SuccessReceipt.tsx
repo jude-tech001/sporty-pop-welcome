@@ -13,7 +13,7 @@ const SuccessReceipt = ({ phoneNumber, amount }: SuccessReceiptProps) => {
   const navigate = useNavigate();
   
   const handleBackToHome = () => {
-    navigate("/");
+    navigate("/", { replace: true });
   };
   
   // Format the amount with commas for thousands and add decimal places
