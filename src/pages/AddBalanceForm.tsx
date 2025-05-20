@@ -4,22 +4,35 @@ import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Home, DollarSign, MessageSquare } from "lucide-react";
+import LoadingScreen from "@/components/LoadingScreen";
+import SuccessReceipt from "@/components/SuccessReceipt";
+import WarningBanner from "@/components/WarningBanner";
 
 const AddBalanceForm = () => {
   const [phoneNumber, setPhoneNumber] = useState("");
   const [confirmPhoneNumber, setConfirmPhoneNumber] = useState("");
   const [amount, setAmount] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
+  const [isSuccess, setIsSuccess] = useState(false);
   const navigate = useNavigate();
   
   const handleAddBalance = () => {
-    // In a real app, you would validate inputs and submit to a backend
-    // For now, we'll just navigate to the payment page
-    navigate("/payment", { 
-      state: { 
-        email: "user@example.com", 
-        phoneNumber 
-      } 
-    });
+    if (!phoneNumber || !confirmPhoneNumber || !amount) {
+      return; // Don't proceed if fields are empty
+    }
+    
+    if (phoneNumber !== confirmPhoneNumber) {
+      return; // Don't proceed if phone numbers don't match
+    }
+    
+    // Show loading screen
+    setIsLoading(true);
+    
+    // After 5 seconds, show success screen
+    setTimeout(() => {
+      setIsLoading(false);
+      setIsSuccess(true);
+    }, 5000);
   };
   
   const handleBackToHome = () => {
@@ -29,6 +42,23 @@ const AddBalanceForm = () => {
   const amountOptions = [
     "500000", "100000", "200000", "500000", "100000", "200000"
   ];
+  
+  // If loading, show loading screen
+  if (isLoading) {
+    return (
+      <div className="fixed inset-0 flex flex-col items-center justify-center bg-white">
+        <div className="w-16 h-16 rounded-full border-4 border-gray-200 relative flex items-center justify-center">
+          <div className="w-14 h-14 rounded-full border-t-4 border-red-600 animate-spin absolute"></div>
+        </div>
+        <p className="mt-4 text-gray-600 text-lg">Balance adding in progress...</p>
+      </div>
+    );
+  }
+  
+  // If success, show success receipt
+  if (isSuccess) {
+    return <SuccessReceipt phoneNumber={phoneNumber} amount={amount} />;
+  }
   
   return (
     <div className="min-h-screen bg-gray-100 flex flex-col">
@@ -49,6 +79,9 @@ const AddBalanceForm = () => {
         <div className="text-red-600 text-sm font-medium">The official</div>
       </div>
       
+      {/* Warning Banner */}
+      <WarningBanner />
+      
       {/* Main Content */}
       <div className="flex-1 p-6 flex flex-col items-center">
         <div className="w-full max-w-md bg-white rounded-lg shadow-md p-6">
@@ -60,6 +93,7 @@ const AddBalanceForm = () => {
             value={phoneNumber}
             onChange={(e) => setPhoneNumber(e.target.value)}
             className="mb-4 border-2 border-red-100"
+            required
           />
           
           <Input
@@ -68,12 +102,14 @@ const AddBalanceForm = () => {
             value={confirmPhoneNumber}
             onChange={(e) => setConfirmPhoneNumber(e.target.value)}
             className="mb-4 border-2 border-red-100"
+            required
           />
           
           <select 
             value={amount}
             onChange={(e) => setAmount(e.target.value)}
             className="w-full mb-5 border-2 border-red-100 rounded-md px-3 py-2 h-10 text-base focus:outline-none focus:border-red-600"
+            required
           >
             <option disabled value="">--Select an amount--</option>
             {amountOptions.map((opt) => (
