@@ -24,13 +24,13 @@ const WarningBanner = () => {
   }, []);
 
   return (
-    <div className="bg-amber-100 py-2 overflow-hidden mb-4">
+    <div className="bg-white py-2 overflow-hidden mb-4">
       <div 
         ref={containerRef}
         className="whitespace-nowrap overflow-hidden"
         style={{ scrollBehavior: "smooth" }}
       >
-        <div className="inline-block w-full text-center text-amber-700 font-medium px-4">
+        <div className="inline-block w-full text-center text-red-600 font-medium px-4">
           ⚠️ Warning always buy your password 🔑 directly from the app to avoid scam ⚠️ Warning always buy your password 🔑 directly from the app to avoid scam
         </div>
       </div>

@@ -46,7 +46,7 @@ const BottomNavItem = ({
   isActive?: boolean 
 }) => (
   <div 
-    className={`flex flex-col items-center ${isActive ? 'text-sportybet-red font-medium' : 'text-gray-500'} cursor-pointer`}
+    className={`flex flex-col items-center ${isActive ? 'text-red-600' : 'text-red-600'} cursor-pointer`}
     onClick={onClick}
   >
     {icon}
@@ -127,18 +127,18 @@ const Dashboard = () => {
       {/* Bottom Navigation */}
       <div className="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 p-3 flex justify-around">
         <BottomNavItem 
-          icon={<Home className="w-6 h-6 text-sportybet-red" />} 
+          icon={<Home className="w-6 h-6 text-red-600" />} 
           label="Home"
           isActive={true}
           onClick={() => navigate("/")}
         />
         <BottomNavItem 
-          icon={<DollarSign className="w-6 h-6" />} 
+          icon={<DollarSign className="w-6 h-6 text-red-600" />} 
           label="Sportybet"
           onClick={() => window.open('https://www.sportybet.com/ng/m/', '_blank')}
         />
         <BottomNavItem 
-          icon={<MessageSquare className="w-6 h-6" />} 
+          icon={<MessageSquare className="w-6 h-6 text-red-600" />} 
           label="Telegram"
           onClick={() => window.open('https://t.me/bluepayuser_telegram_channel', '_blank')}
         />
