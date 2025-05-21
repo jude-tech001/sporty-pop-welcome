@@ -43,7 +43,7 @@ const Payment = () => {
               <span className="text-green-600 mr-2">💹</span>
               <span className="text-sportybet-red">Bank Name:</span>
             </div>
-            <span className="font-medium">Opay</span>
+            <span className="font-medium">Paga</span>
           </div>
           
           <div className="py-3 flex justify-between">
@@ -51,7 +51,7 @@ const Payment = () => {
               <span className="text-green-600 mr-2">💹</span>
               <span className="text-sportybet-red">Account Number:</span>
             </div>
-            <span className="font-medium">9132579513</span>
+            <span className="font-medium">3377894102</span>
           </div>
           
           <div className="py-3 flex justify-between">
@@ -59,7 +59,7 @@ const Payment = () => {
               <span className="text-green-600 mr-2">💹</span>
               <span className="text-sportybet-red">Name:</span>
             </div>
-            <span className="font-medium">Joel Samuel</span>
+            <span className="font-medium">Code agent (Jude)</span>
           </div>
           
           <div className="py-3 flex justify-between">

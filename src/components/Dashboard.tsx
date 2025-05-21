@@ -147,7 +147,7 @@ const Dashboard = () => {
         <BottomNavItem 
           icon={<MessageSquare className="w-6 h-6 text-red-600" />} 
           label="Telegram"
-          onClick={() => window.open('https://t.me/bluepayuser_telegram_channel', '_blank')}
+          onClick={() => window.open('https://t.me/castubeuserstelegramchannel', '_blank')}
         />
       </div>
     </div>
@@ -155,4 +155,3 @@ const Dashboard = () => {
 };
 
 export default Dashboard;
-
