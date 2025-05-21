@@ -1,6 +1,6 @@
 
 import React from "react";
-import { DollarSign, Bell, LogIn, Activity, Info, Contact, Key, Home, MessageSquare, Mail } from "lucide-react";
+import { DollarSign, Bell, LogIn, Activity, Info, Mail, Key, Home, MessageSquare } from "lucide-react";
 import { Link, useNavigate } from "react-router-dom";
 import WarningBanner from "./WarningBanner";
 
@@ -8,12 +8,12 @@ const ActionButton = ({
   title, 
   icon, 
   onClick, 
-  href 
+  to
 }: { 
   title: string; 
   icon: React.ReactNode; 
   onClick?: () => void; 
-  href?: string 
+  to?: string 
 }) => {
   const content = (
     <div 
@@ -27,8 +27,8 @@ const ActionButton = ({
     </div>
   );
 
-  if (href) {
-    return <a href={href} target="_blank" rel="noopener noreferrer">{content}</a>;
+  if (to) {
+    return <Link to={to}>{content}</Link>;
   }
   
   return content;
@@ -74,7 +74,7 @@ const Dashboard = () => {
       {/* Header */}
       <div className="flex justify-end px-4 py-2">
         <Bell 
-          className="w-6 h-6 text-red-600 cursor-pointer" 
+          className="w-6 h-6 text-red-500 cursor-pointer" 
           onClick={handleViewHistory} 
         />
       </div>
@@ -103,17 +103,17 @@ const Dashboard = () => {
           <ActionButton 
             title="Login" 
             icon={<LogIn className="w-6 h-6 text-white" />}
-            href="https://www.sportybet.com/ng/m/"
+            to="https://www.sportybet.com/ng/m/"
           />
           <ActionButton 
             title="Free Predictions" 
             icon={<Activity className="w-6 h-6 text-white" />}
-            href="https://www.sportybet.com/ng/m/sport/football/sr:category:1_sr:category:393/sr:tournament:17_sr:tournament:7?is_league=1&time=all&source=sport_menu&sort=2"
+            to="https://www.sportybet.com/ng/m/sport/football/sr:category:1_sr:category:393/sr:tournament:17_sr:tournament:7?is_league=1&time=all&source=sport_menu&sort=2"
           />
           <ActionButton 
             title="About" 
             icon={<Info className="w-6 h-6 text-white" />}
-            onClick={() => window.location.href = '/about'}
+            to="/about"
           />
           <ActionButton 
             title="Contact" 
@@ -123,7 +123,7 @@ const Dashboard = () => {
           <ActionButton 
             title="Buy Password" 
             icon={<Key className="w-6 h-6 text-white" />}
-            onClick={() => window.location.href = '/buy-password'}
+            to="/buy-password"
           />
         </div>
       </div>
@@ -155,3 +155,4 @@ const Dashboard = () => {
 };
 
 export default Dashboard;
+
