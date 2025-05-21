@@ -11,15 +11,10 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
+import { Badge } from "@/components/ui/badge";
 
-// Mock withdrawal history data - in a real app this would come from a backend
-const mockWithdrawals = [
-  { id: 1, amount: "3000", date: "2025-05-19 09:45" },
-  { id: 2, amount: "7500", date: "2025-05-18 16:22" },
-  { id: 3, amount: "12000", date: "2025-05-17 11:38" },
-  { id: 4, amount: "5000", date: "2025-05-16 14:05" },
-  { id: 5, amount: "8500", date: "2025-05-15 17:52" },
-];
+// Empty array for withdrawals - we'll show "No transactions made" message instead
+const mockWithdrawals: { id: number; amount: string; date: string }[] = [];
 
 const BalanceHistory = () => {
   const navigate = useNavigate();
@@ -47,27 +42,40 @@ const BalanceHistory = () => {
       </div>
 
       <div className="bg-gray-50 p-4 rounded-lg mb-4">
-        <h2 className="text-lg font-semibold mb-2 text-center">Recent Withdrawals</h2>
-        
-        <div className="overflow-x-auto">
-          <Table>
-            <TableCaption>A list of recent successful withdrawals</TableCaption>
-            <TableHeader>
-              <TableRow>
-                <TableHead className="text-red-600">Amount (₦)</TableHead>
-                <TableHead className="text-red-600">Date & Time</TableHead>
-              </TableRow>
-            </TableHeader>
-            <TableBody>
-              {mockWithdrawals.map((withdrawal) => (
-                <TableRow key={withdrawal.id}>
-                  <TableCell className="font-medium">₦{formatAmount(withdrawal.amount)}</TableCell>
-                  <TableCell>{withdrawal.date}</TableCell>
-                </TableRow>
-              ))}
-            </TableBody>
-          </Table>
-        </div>
+        {mockWithdrawals.length > 0 ? (
+          <>
+            <h2 className="text-lg font-semibold mb-2 text-center">Recent Withdrawals</h2>
+            
+            <div className="overflow-x-auto">
+              <Table>
+                <TableCaption>A list of your withdrawals</TableCaption>
+                <TableHeader>
+                  <TableRow>
+                    <TableHead className="text-red-600">Amount (₦)</TableHead>
+                    <TableHead className="text-red-600">Date & Time</TableHead>
+                  </TableRow>
+                </TableHeader>
+                <TableBody>
+                  {mockWithdrawals.map((withdrawal) => (
+                    <TableRow key={withdrawal.id}>
+                      <TableCell className="font-medium">₦{formatAmount(withdrawal.amount)}</TableCell>
+                      <TableCell>{withdrawal.date}</TableCell>
+                    </TableRow>
+                  ))}
+                </TableBody>
+              </Table>
+            </div>
+          </>
+        ) : (
+          <div className="text-center py-10">
+            <div className="mb-4">
+              <Badge variant="outline" className="px-3 py-1 border-red-200 bg-red-50 text-red-600">
+                No transactions
+              </Badge>
+            </div>
+            <p className="text-gray-500">No withdrawal transactions made yet.</p>
+          </div>
+        )}
       </div>
     </div>
   );
