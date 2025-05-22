@@ -73,6 +73,10 @@ const Dashboard = () => {
     navigate("/watch-football");
   };
   
+  const handleJoinTelegram = () => {
+    window.open('https://t.me/castubeuserstelegramchannel', '_blank');
+  };
+
   return (
     <div className="min-h-screen bg-gray-100 animate-fade-in pt-4 pb-20">
       {/* Header */}
@@ -133,6 +137,11 @@ const Dashboard = () => {
             title="Watch Football" 
             icon={<Youtube className="w-6 h-6 text-white" />}
             onClick={handleWatchFootball}
+          />
+          <ActionButton 
+            title="Join Telegram" 
+            icon={<MessageSquare className="w-6 h-6 text-white" />}
+            onClick={handleJoinTelegram}
           />
         </div>
       </div>

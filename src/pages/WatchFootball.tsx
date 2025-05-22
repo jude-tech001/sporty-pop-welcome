@@ -35,11 +35,11 @@ const WatchFootball = () => {
           </p>
         </div>
 
-        {/* Second Video */}
+        {/* Second Video - Updated with new link */}
         <div className="bg-white p-4 rounded-lg shadow-md">
           <div className="aspect-video w-full mb-4">
             <iframe
-              src="https://youtube.com/embed/ms6jcf0rbsU?autoplay=0&controls=1"
+              src="https://youtube.com/embed/cYwe4s8r17M?autoplay=0&controls=1"
               title="Football Short 1"
               className="w-full h-full rounded-md"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -53,11 +53,11 @@ const WatchFootball = () => {
           </p>
         </div>
 
-        {/* Third Video */}
+        {/* Third Video - Updated with new link */}
         <div className="bg-white p-4 rounded-lg shadow-md">
           <div className="aspect-video w-full mb-4">
             <iframe
-              src="https://youtube.com/embed/QSFBlNgQ3PM?autoplay=0&controls=1"
+              src="https://youtube.com/embed/kAVCAP5D3cs?autoplay=0&controls=1"
               title="Football Short 2"
               className="w-full h-full rounded-md"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
