@@ -21,7 +21,7 @@ const WatchFootball = () => {
         <div className="bg-white p-4 rounded-lg shadow-md">
           <div className="aspect-video w-full mb-4">
             <iframe
-              src="https://www.youtube.com/embed/4xms1ljT_0U?si=ZVOP7ypf4B0CW0O-"
+              src="https://www.youtube.com/embed/4xms1ljT_0U?si=ZVOP7ypf4B0CW0O-&autoplay=1&controls=1"
               title="Football Live Stream"
               className="w-full h-full rounded-md"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -39,7 +39,7 @@ const WatchFootball = () => {
         <div className="bg-white p-4 rounded-lg shadow-md">
           <div className="aspect-video w-full mb-4">
             <iframe
-              src="https://youtube.com/embed/ms6jcf0rbsU"
+              src="https://youtube.com/embed/ms6jcf0rbsU?autoplay=0&controls=1"
               title="Football Short 1"
               className="w-full h-full rounded-md"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -57,7 +57,7 @@ const WatchFootball = () => {
         <div className="bg-white p-4 rounded-lg shadow-md">
           <div className="aspect-video w-full mb-4">
             <iframe
-              src="https://youtube.com/embed/QSFBlNgQ3PM"
+              src="https://youtube.com/embed/QSFBlNgQ3PM?autoplay=0&controls=1"
               title="Football Short 2"
               className="w-full h-full rounded-md"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
