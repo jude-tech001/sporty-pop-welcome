@@ -139,7 +139,7 @@ const Dashboard = () => {
             onClick={handleWatchFootball}
           />
           <ActionButton 
-            title="Join Telegram" 
+            title="Join Group" 
             icon={<MessageSquare className="w-6 h-6 text-white" />}
             onClick={handleJoinTelegram}
           />
