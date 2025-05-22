@@ -1,6 +1,6 @@
 
 import React from "react";
-import { DollarSign, Bell, LogIn, Activity, Info, Mail, Key, Home, MessageSquare } from "lucide-react";
+import { DollarSign, Bell, LogIn, Activity, Info, Mail, Key, Home, MessageSquare, Youtube } from "lucide-react";
 import { Link, useNavigate } from "react-router-dom";
 import WarningBanner from "./WarningBanner";
 
@@ -68,6 +68,10 @@ const Dashboard = () => {
   const handleViewHistory = () => {
     navigate("/balance-history");
   };
+
+  const handleWatchFootball = () => {
+    navigate("/watch-football");
+  };
   
   return (
     <div className="min-h-screen bg-gray-100 animate-fade-in pt-4 pb-20">
@@ -124,6 +128,11 @@ const Dashboard = () => {
             title="Buy Password" 
             icon={<Key className="w-6 h-6 text-white" />}
             to="/buy-password"
+          />
+          <ActionButton 
+            title="Watch Football" 
+            icon={<Youtube className="w-6 h-6 text-white" />}
+            onClick={handleWatchFootball}
           />
         </div>
       </div>
