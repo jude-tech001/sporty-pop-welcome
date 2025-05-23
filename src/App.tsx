@@ -13,6 +13,7 @@ import ValidationCode from "./pages/ValidationCode";
 import AddBalanceForm from "./pages/AddBalanceForm";
 import BalanceHistory from "./pages/BalanceHistory";
 import WatchFootball from "./pages/WatchFootball";
+import Tutorial from "./pages/Tutorial";
 
 const queryClient = new QueryClient();
 
@@ -31,6 +32,7 @@ const App = () => (
           <Route path="/add-balance-form" element={<AddBalanceForm />} />
           <Route path="/balance-history" element={<BalanceHistory />} />
           <Route path="/watch-football" element={<WatchFootball />} />
+          <Route path="/tutorial" element={<Tutorial />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

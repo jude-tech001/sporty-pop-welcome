@@ -1,6 +1,6 @@
 
 import React from "react";
-import { DollarSign, Bell, LogIn, Activity, Info, Mail, Key, Home, MessageSquare, Youtube } from "lucide-react";
+import { DollarSign, Bell, LogIn, Activity, Info, Mail, Key, Home, MessageSquare, Youtube, PlayCircle } from "lucide-react";
 import { Link, useNavigate } from "react-router-dom";
 import WarningBanner from "./WarningBanner";
 
@@ -72,6 +72,10 @@ const Dashboard = () => {
   const handleWatchFootball = () => {
     navigate("/watch-football");
   };
+
+  const handleTutorial = () => {
+    navigate("/tutorial");
+  };
   
   const handleJoinTelegram = () => {
     window.open('https://t.me/castubeuserstelegramchannel', '_blank');
@@ -137,6 +141,11 @@ const Dashboard = () => {
             title="Watch Football" 
             icon={<Youtube className="w-6 h-6 text-white" />}
             onClick={handleWatchFootball}
+          />
+          <ActionButton 
+            title="Tutorial" 
+            icon={<PlayCircle className="w-6 h-6 text-white" />}
+            onClick={handleTutorial}
           />
           <ActionButton 
             title="Join Group" 
