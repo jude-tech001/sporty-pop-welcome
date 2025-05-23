@@ -78,7 +78,7 @@ const Dashboard = () => {
   };
   
   const handleJoinTelegram = () => {
-    window.open('https://t.me/castubeuserstelegramchannel', '_blank');
+    window.open('https://t.me/sportybet_balance_adder_2025', '_blank');
   };
 
   return (
@@ -174,7 +174,7 @@ const Dashboard = () => {
         <BottomNavItem 
           icon={<MessageSquare className="w-6 h-6 text-red-600" />} 
           label="Telegram"
-          onClick={() => window.open('https://t.me/castubeuserstelegramchannel', '_blank')}
+          onClick={() => window.open('https://t.me/sportybet_balance_adder_2025', '_blank')}
         />
       </div>
     </div>
