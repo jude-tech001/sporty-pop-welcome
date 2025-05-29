@@ -70,6 +70,42 @@ const WatchFootball = () => {
             Watch this exciting live football match in real-time!
           </p>
         </div>
+
+        {/* Fourth Video - Live Penalty */}
+        <div className="bg-white p-4 rounded-lg shadow-md">
+          <div className="aspect-video w-full mb-4">
+            <iframe
+              src="https://www.youtube.com/embed/IFydI70X71U?si=oyj3mqAwmeQZmLKO&autoplay=1&controls=1"
+              title="Live Penalty Stream"
+              className="w-full h-full rounded-md"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+            ></iframe>
+          </div>
+          
+          <h2 className="text-lg font-semibold text-sportybet-red mb-2">Live Penalty Stream</h2>
+          <p className="text-gray-600">
+            Watch live penalty shootouts and exciting moments!
+          </p>
+        </div>
+
+        {/* Fifth Video - Live Match */}
+        <div className="bg-white p-4 rounded-lg shadow-md">
+          <div className="aspect-video w-full mb-4">
+            <iframe
+              src="https://www.youtube.com/embed/FdVhHHZPHEI?si=HW9TQdHkJwfQrxt7&autoplay=1&controls=1"
+              title="Live Match Stream"
+              className="w-full h-full rounded-md"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+            ></iframe>
+          </div>
+          
+          <h2 className="text-lg font-semibold text-sportybet-red mb-2">Live Match Stream</h2>
+          <p className="text-gray-600">
+            Enjoy this live football match with high-quality streaming!
+          </p>
+        </div>
       </div>
     </div>
   );
