@@ -52,6 +52,24 @@ const WatchFootball = () => {
             Another live football stream for your viewing pleasure!
           </p>
         </div>
+
+        {/* Third Video */}
+        <div className="bg-white p-4 rounded-lg shadow-md">
+          <div className="aspect-video w-full mb-4">
+            <iframe
+              src="https://www.youtube.com/embed/HKM3HqpTrLs?si=EieuYnRQU68skRt0&autoplay=1&controls=1"
+              title="Football Live Match Stream"
+              className="w-full h-full rounded-md"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+            ></iframe>
+          </div>
+          
+          <h2 className="text-lg font-semibold text-sportybet-red mb-2">Live Football Match Stream</h2>
+          <p className="text-gray-600">
+            Watch this exciting live football match in real-time!
+          </p>
+        </div>
       </div>
     </div>
   );
