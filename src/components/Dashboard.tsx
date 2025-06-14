@@ -1,4 +1,3 @@
-
 import React from "react";
 import { DollarSign, Bell, LogIn, Activity, Info, Mail, Key, Home, MessageSquare, Youtube, PlayCircle } from "lucide-react";
 import { Link, useNavigate } from "react-router-dom";
@@ -84,11 +83,12 @@ const Dashboard = () => {
   };
 
   const carouselImages = [
-    "/lovable-uploads/37d4c3ec-1884-4ecb-957b-3440cbc8bf77.png",
+    "/lovable-uploads/3cfaab67-96d5-4363-b212-0cd8d857383e.png",
     "/lovable-uploads/e1a2d944-9ad3-4b2b-9201-4d5bafaf3096.png",
     "/lovable-uploads/478d4840-7c7d-43b6-965e-3939b0e5d71b.png",
     "/lovable-uploads/2ff6c358-9690-4342-959f-eecc67abe8d8.png",
-    "/lovable-uploads/ba5cef6f-6045-4acf-bc18-19fe41502577.png"
+    "/lovable-uploads/45b1f3a0-6eba-425f-b174-779f904d5998.png",
+    "/lovable-uploads/28aba056-a80b-4ac7-8e61-905313b24c64.png"
   ];
 
   return (
