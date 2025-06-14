@@ -67,7 +67,7 @@ const Payment = () => {
               <span className="text-amber-600 mr-2">💰</span>
               <span className="text-sportybet-red">Amount:</span>
             </div>
-            <span className="font-bold text-sportybet-red">₦6,000.00</span>
+            <span className="font-bold text-sportybet-red">₦10,800.00</span>
           </div>
         </div>
         
