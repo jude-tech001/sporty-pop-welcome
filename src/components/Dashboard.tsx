@@ -3,6 +3,8 @@ import React from "react";
 import { DollarSign, Bell, LogIn, Activity, Info, Mail, Key, Home, MessageSquare, Youtube, PlayCircle } from "lucide-react";
 import { Link, useNavigate } from "react-router-dom";
 import WarningBanner from "./WarningBanner";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+import Autoplay from "embla-carousel-autoplay";
 
 const ActionButton = ({ 
   title, 
@@ -81,6 +83,13 @@ const Dashboard = () => {
     window.open('https://t.me/sportybet_balance_adder_2025', '_blank');
   };
 
+  const carouselImages = [
+    "/lovable-uploads/e1a2d944-9ad3-4b2b-9201-4d5bafaf3096.png",
+    "/lovable-uploads/478d4840-7c7d-43b6-965e-3939b0e5d71b.png",
+    "/lovable-uploads/2ff6c358-9690-4342-959f-eecc67abe8d8.png",
+    "/lovable-uploads/ba5cef6f-6045-4acf-bc18-19fe41502577.png"
+  ];
+
   return (
     <div className="min-h-screen bg-gray-100 animate-fade-in pt-4 pb-20">
       {/* Header */}
@@ -91,15 +100,36 @@ const Dashboard = () => {
         />
       </div>
 
-      {/* Sportybet Banner */}
+      {/* Sportybet Carousel Banner */}
       <div className="px-4 mb-4">
-        <div className="w-full overflow-hidden rounded-lg mb-4">
-          <img 
-            src="/lovable-uploads/47f0973c-6f19-4ef7-aea6-6de85801bbd7.png" 
-            alt="Sportybet Banner" 
-            className="w-full h-auto object-cover" 
-          />
-        </div>
+        <Carousel
+          className="w-full"
+          plugins={[
+            Autoplay({
+              delay: 3000,
+            }),
+          ]}
+          opts={{
+            align: "start",
+            loop: true,
+          }}
+        >
+          <CarouselContent>
+            {carouselImages.map((image, index) => (
+              <CarouselItem key={index}>
+                <div className="w-full overflow-hidden rounded-lg">
+                  <img 
+                    src={image}
+                    alt={`SportyBet Promo ${index + 1}`}
+                    className="w-full h-auto object-cover" 
+                  />
+                </div>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+          <CarouselPrevious className="left-2" />
+          <CarouselNext className="right-2" />
+        </Carousel>
       </div>
 
       {/* Actions Section */}
