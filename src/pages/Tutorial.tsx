@@ -21,7 +21,7 @@ const Tutorial = () => {
         <div className="bg-white p-4 rounded-lg shadow-md">
           <div className="aspect-video w-full mb-4">
             <iframe
-              src="https://www.youtube.com/embed/nq1gpCgOyoc?si=uMThvsYh09OIXaFY&autoplay=1&controls=1"
+              src="https://www.youtube.com/embed/cEuaF4nxozk?si=oOMuF4aMwnoIqMZa&autoplay=1&controls=1"
               title="Tutorial Video"
               className="w-full h-full rounded-md"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
