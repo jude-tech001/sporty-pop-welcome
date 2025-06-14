@@ -84,6 +84,7 @@ const Dashboard = () => {
   };
 
   const carouselImages = [
+    "/lovable-uploads/37d4c3ec-1884-4ecb-957b-3440cbc8bf77.png",
     "/lovable-uploads/e1a2d944-9ad3-4b2b-9201-4d5bafaf3096.png",
     "/lovable-uploads/478d4840-7c7d-43b6-965e-3939b0e5d71b.png",
     "/lovable-uploads/2ff6c358-9690-4342-959f-eecc67abe8d8.png",
