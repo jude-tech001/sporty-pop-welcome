@@ -1,10 +1,26 @@
 
-import React from "react";
+import React, { useState } from "react";
 import { ArrowLeft } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import TypewriterText from "@/components/TypewriterText";
 
 const Tutorial = () => {
   const navigate = useNavigate();
+  const [currentStep, setCurrentStep] = useState(0);
+
+  const steps = [
+    "Click on buy password in the site/app",
+    "Fill in your email and mobile number",
+    "Copy our account and make a one-time payment of 10,800",
+    "After successful payment come back and verify your payment",
+    "Your code will be sent to you via email or phone number you submit"
+  ];
+
+  const handleStepComplete = () => {
+    if (currentStep < steps.length - 1) {
+      setCurrentStep(prev => prev + 1);
+    }
+  };
 
   return (
     <div className="min-h-screen bg-gray-100 p-4">
@@ -38,38 +54,49 @@ const Tutorial = () => {
           <div className="bg-gray-50 p-4 rounded-lg">
             <h3 className="text-lg font-bold text-sportybet-red mb-4">How to Buy Password:</h3>
             <ol className="space-y-3 text-gray-700">
-              <li className="flex items-start">
-                <span className="bg-sportybet-red text-white rounded-full w-6 h-6 flex items-center justify-center text-sm mr-3 mt-0.5">1</span>
-                <span>Click on buy password in the site/app</span>
-              </li>
-              <li className="flex items-start">
-                <span className="bg-sportybet-red text-white rounded-full w-6 h-6 flex items-center justify-center text-sm mr-3 mt-0.5">2</span>
-                <span>Fill in your email and mobile number</span>
-              </li>
-              <li className="flex items-start">
-                <span className="bg-sportybet-red text-white rounded-full w-6 h-6 flex items-center justify-center text-sm mr-3 mt-0.5">3</span>
-                <span>Copy our account and make a one-time payment of 10,800</span>
-              </li>
-              <li className="flex items-start">
-                <span className="bg-sportybet-red text-white rounded-full w-6 h-6 flex items-center justify-center text-sm mr-3 mt-0.5">4</span>
-                <span>After successful payment come back and verify your payment</span>
-              </li>
-              <li className="flex items-start">
-                <span className="bg-sportybet-red text-white rounded-full w-6 h-6 flex items-center justify-center text-sm mr-3 mt-0.5">5</span>
-                <span>Your code will be sent to you via email or phone number you submit</span>
-              </li>
+              {steps.map((step, index) => (
+                <li key={index} className="flex items-start">
+                  <span className="bg-sportybet-red text-white rounded-full w-6 h-6 flex items-center justify-center text-sm mr-3 mt-0.5">
+                    {index + 1}
+                  </span>
+                  <span>
+                    {index <= currentStep ? (
+                      <TypewriterText 
+                        text={step} 
+                        speed={30}
+                        delay={index * 2000}
+                        onComplete={handleStepComplete}
+                      />
+                    ) : (
+                      ""
+                    )}
+                  </span>
+                </li>
+              ))}
             </ol>
 
             {/* Notice Warning */}
-            <div className="mt-6 p-4 bg-red-50 border-l-4 border-red-500 rounded-r-lg">
-              <div className="flex items-center mb-2">
-                <span className="text-red-600 text-lg mr-2">⛔</span>
-                <h4 className="font-bold text-red-600">NOTICE</h4>
+            {currentStep >= steps.length - 1 && (
+              <div className="mt-6 p-4 bg-red-50 border-l-4 border-red-500 rounded-r-lg animate-fade-in">
+                <div className="flex items-center mb-2">
+                  <span className="text-red-600 text-lg mr-2">⛔</span>
+                  <h4 className="font-bold text-red-600">
+                    <TypewriterText 
+                      text="NOTICE" 
+                      speed={100}
+                      delay={1000}
+                    />
+                  </h4>
+                </div>
+                <p className="text-red-700">
+                  <TypewriterText 
+                    text="Don't make payment outside this app for your code beware of scammers pay in the app only" 
+                    speed={25}
+                    delay={2000}
+                  />
+                </p>
               </div>
-              <p className="text-red-700">
-                Don't make payment outside this app for your code beware of scammers pay in the app only
-              </p>
-            </div>
+            )}
           </div>
         </div>
       </div>

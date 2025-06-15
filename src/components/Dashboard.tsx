@@ -89,7 +89,10 @@ const Dashboard = () => {
     "/lovable-uploads/478d4840-7c7d-43b6-965e-3939b0e5d71b.png",
     "/lovable-uploads/2ff6c358-9690-4342-959f-eecc67abe8d8.png",
     "/lovable-uploads/45b1f3a0-6eba-425f-b174-779f904d5998.png",
-    "/lovable-uploads/28aba056-a80b-4ac7-8e61-905313b24c64.png"
+    "/lovable-uploads/28aba056-a80b-4ac7-8e61-905313b24c64.png",
+    "/lovable-uploads/6a6688b7-6a0e-49d3-b2d2-e2b91b05ed5c.png",
+    "/lovable-uploads/11fd23e7-f583-4d4a-9078-5355f4a5e1aa.png",
+    "/lovable-uploads/151ae0fe-8858-4b4f-9553-6f8b2e9d337d.png"
   ];
 
   return (
