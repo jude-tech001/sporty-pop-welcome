@@ -139,7 +139,12 @@ const Dashboard = () => {
 
       {/* Actions Section */}
       <div className="px-4 mb-4">
-        <h2 className="text-xl font-bold text-sportybet-red mb-3">Actions</h2>
+        <h2 
+          className="text-xl font-bold text-sportybet-red mb-3 cursor-pointer hover:underline" 
+          onClick={handleJoinTelegram}
+        >
+          Actions
+        </h2>
         
         <div className="grid grid-cols-3 gap-3">
           <ActionButton 
