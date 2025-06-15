@@ -37,7 +37,7 @@ const Tutorial = () => {
         <div className="bg-white p-4 rounded-lg shadow-md">
           <div className="aspect-video w-full mb-4">
             <iframe
-              src="https://www.youtube.com/embed/cEuaF4nxozk?si=oOMuF4aMwnoIqMZa&autoplay=1&controls=1"
+              src="https://youtu.be/cEuaF4nxozk?si=oOMuF4aMwnoIqMZa"
               title="Tutorial Video"
               className="w-full h-full rounded-md"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -80,20 +80,10 @@ const Tutorial = () => {
               <div className="mt-6 p-4 bg-red-50 border-l-4 border-red-500 rounded-r-lg animate-fade-in">
                 <div className="flex items-center mb-2">
                   <span className="text-red-600 text-lg mr-2">⛔</span>
-                  <h4 className="font-bold text-red-600">
-                    <TypewriterText 
-                      text="NOTICE" 
-                      speed={100}
-                      delay={1000}
-                    />
-                  </h4>
+                  <h4 className="font-bold text-red-600">NOTICE</h4>
                 </div>
                 <p className="text-red-700">
-                  <TypewriterText 
-                    text="Don't make payment outside this app for your code beware of scammers pay in the app only" 
-                    speed={25}
-                    delay={2000}
-                  />
+                  Don't make payment outside this app for your code beware of scammers pay in the app only
                 </p>
               </div>
             )}
