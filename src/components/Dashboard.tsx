@@ -1,5 +1,6 @@
+
 import React from "react";
-import { DollarSign, Bell, LogIn, Activity, Info, Mail, Key, Home, MessageSquare, Youtube, PlayCircle, IndianRupee } from "lucide-react";
+import { DollarSign, Bell, LogIn, Activity, Info, Mail, Key, Home, MessageSquare, Youtube, PlayCircle } from "lucide-react";
 import { Link, useNavigate } from "react-router-dom";
 import WarningBanner from "./WarningBanner";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
@@ -140,7 +141,7 @@ const Dashboard = () => {
         <div className="grid grid-cols-3 gap-3">
           <ActionButton 
             title="Add Balance" 
-            icon={<IndianRupee className="w-6 h-6 text-white" />} 
+            icon={<span className="text-white text-2xl font-bold">₦</span>} 
             onClick={handleAddBalance}
           />
           <ActionButton 
