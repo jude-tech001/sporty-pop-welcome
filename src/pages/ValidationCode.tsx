@@ -12,7 +12,7 @@ const ValidationCode = () => {
   const navigate = useNavigate();
   const { toast } = useToast();
   
-  const correctCode = "Sporty@0176-bet_2025";
+  const correctCode = "SportAdd2020CODE00Q";
   
   const handleValidate = () => {
     if (validationCode === correctCode) {
